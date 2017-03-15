@@ -1,0 +1,19 @@
+{
+  "name": "weeat",
+  "version": "1.0.0",
+  "description": "training project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midma101/weeat.git"
+  },
+  "author": "azucker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/midma101/weeat/issues"
+  },
+  "homepage": "https://github.com/midma101/weeat#readme"
+}
