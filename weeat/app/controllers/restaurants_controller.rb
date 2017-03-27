@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  protect_from_forgery with: :null_session
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   # GET /restaurants
@@ -11,7 +12,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1.json
   def show
   end
-
+``
   # GET /restaurants/new
   def new
     @restaurant = Restaurant.new
@@ -28,8 +29,9 @@ class RestaurantsController < ApplicationController
 
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
-        format.json { render :show, status: :created, location: @restaurant }
+        format.html do
+          redirect_to '/restaurants'
+        end
       else
         format.html { render :new }
         format.json { render json: @restaurant.errors, status: :unprocessable_entity }
@@ -64,11 +66,11 @@ class RestaurantsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant
-      @restaurant = Restaurant.find(params[:id])
+      @restaurant = Restaurant.where(:name=>params[:id]).first
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:name, :cuisine, :rating, :ten_bis, :address, :max_delivery_time)
+      params.permit(:name, :cuisine, :rating, :ten_bis, :address, :max_delivery_time)
     end
 end

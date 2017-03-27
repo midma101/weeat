@@ -1,3 +1,92 @@
 // Place all the styles related to the Restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.restaurant {
+  border-style: solid;
+}
+
+.restaurant-name {
+  font-size: large;
+}
+
+.restaurant-list {
+  width: 500px;
+  height: 950px;
+  float: left;
+  overflow-y: auto;
+}
+
+.map {
+  margin-left: 550px;
+}
+
+.ten-bis-img {
+  height: 40px;
+  width: 72px;
+}
+
+.slider {
+  max-width: 300px;
+}
+
+.row {
+  display: inline-block;
+  background-color: rgba(240,240,240,0.4);
+}
+
+.filter-view {
+  /* Rectangle 4: */
+  background: #F54343;
+  padding: 25px;
+}
+
+.filter-container {
+  display: inline-block;
+  margin-right: 300px;
+  width: 200px;
+  color: white;
+}
+
+.title {
+  text-align: center;
+}
+
+.title-container {
+
+  font-family: ProximaNova-Semibold;
+  font-size: 20px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+
+  padding: 35px;
+  background-image: url(image_path("background.png"));
+}
+
+.new-button {
+  color: black;
+  float: right;
+}
+
+/* The Modal (background) */
+.modal-window {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgba(254,254,254,1);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  height: 80%;
+  color: black;
+}

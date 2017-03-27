@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/midma101/weeat/issues"
   },
-  "homepage": "https://github.com/midma101/weeat#readme"
+  "homepage": "https://github.com/midma101/weeat#readme",
+  "dependencies": {
+    "google-map-react": "^0.23.0"
+  }
 }
